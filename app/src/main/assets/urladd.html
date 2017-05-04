@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE> New Document </TITLE>
+    <style>
+	html, * {
+		font-size:16px;
+	}
+
+	body {text-align:center;background-color:#FFE3FF}
+	div {
+		text-align:center;
+		padding-top:10px;
+		color:blue;
+	}
+  </style>
+
+    <script>
+	function displayMsg(){
+		var str = "������ ����Ʈ�� ��ϵǾ� �ֽ��ϴ�.";
+		document.getElementById('msg').innerText = str;
+		document.getElementById('url').value='';
+		document.getElementById('url').focus();
+	}
+
+	function setMsg(msg){
+		document.getElementById('msg').innerText = msg;
+	}
+
+	function siteAdd(){
+		var sitename = document.getElementById('sitename');
+		if(sitename.value==''){
+			setMsg('����Ʈ���� �Է��ϼ���');
+			sitename.focus();
+			return;
+		}
+
+		var url = document.getElementById('url');
+		if(url.value==''){
+			setMsg('URL�� �Է��ϼ���');
+			url.focus();
+			return;
+		}
+		//���⿡ �� �޼ҵ� ȣ��
+
+	}
+  </script>
+</HEAD>
+
+<BODY style="text-align:center;background-color:#FFCCFF">
+<input type="button" value="URL ���̱�" onclick="">
+<h3>���ã�⸦ �߰��� ������</h3>
+<TABLE style="background-color:#FFF2FF" align="center">
+    <TR>
+        <TD>����Ʈ��</TD>
+        <TD><INPUT TYPE="text" id="sitename"></TD>
+    </TR>
+    <TR>
+        <TD>url</TD>
+        <TD><INPUT TYPE="text" id="url"></TD>
+    </TR>
+    <TR>
+        <TD colspan="2" align="center"><input type="button" value="���ã���߰�" onclick="siteAdd()"></TD>
+    </TR>
+</TABLE>
+<div id='msg'></div>
+</BODY>
+</HTML>
