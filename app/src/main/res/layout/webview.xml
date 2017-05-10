@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="kr.blogspot.httpcarelesssandbox.a170504np.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_weight="8"
-            android:id="@+id/et"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#f5abab" />
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
 
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClick"
-            android:text="Go" />
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5abab" />
 
-        <Button
-        android:layout_weight="1"
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="AA" />
+            <Button
+                android:layout_weight="7"
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Go" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <WebView
-        android:id="@+id/webview"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
+        android:layout_height="wrap_content">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"></WebView>
+
+    <ListView
+        android:id="@+id/listlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+    </FrameLayout>
 
 </LinearLayout>
